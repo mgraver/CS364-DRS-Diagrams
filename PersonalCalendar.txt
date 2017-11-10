@@ -1,18 +1,34 @@
 @startuml
+
 skinparam classAttributeIconSize 0
 
 class PersonalCalendar {
   -daysOfMonth : List<Day>
-  -month : string
+  -month : MonthNames
   -year : int
   -day : int
-  +PersonalCalendar(string, int, int)
-  +getMonth() : string
-  +setMonth(int) : void
+  +PersonalCalendar(MonthNames, int, int)
+  +getMonth() : MonthNames
+  +setMonth(MonthNames) : void
   +getYear() : int
   +setYear(int) : void
   +getDay() : int
   +setDay(int) : void
+}
+
+enum MonthNames {
+    January, 
+    February,
+    March,
+    April,
+    May,
+    June,
+    July,
+    August,
+    September,
+    October,
+    November,
+    December
 }
 
 @enduml
