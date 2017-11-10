@@ -1,0 +1,39 @@
+@startuml
+
+class Calendar {
+  #daysOfMonth : Array<Day>
+  #Month: string
+  #Year: Int
+  #Date: Int
+  +Calendar(string, int, int)
+  +getMonth() : String
+  +getYear() : Int
+  +getDate() : Int
+  +getDaysOfMonth() : Day
+  +setMonth() : void
+  +setYear( ): Int
+  +setDate() : Int
+  +setDaysOfMonth(int, Day) : void
+  
+}
+
+
+class WardCalendar {
+  +notification : bool
++      WardCalendar()
++      WardCalendar(string, int, int)
++      displayMonth() : void
++      displayWeek() : void
++      displayDay() : void
++      sendNotification() : Vector<Event>
++      addDay(Day, int) : void
+}
+
+class PersonalCalendar {
+  +PersonalCalendar(string, int, int)
+}
+
+Calendar <|--  WardCalendar
+Calendar <|--  PersonalCalendar
+
+@enduml
