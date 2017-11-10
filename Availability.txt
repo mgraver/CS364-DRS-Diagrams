@@ -2,8 +2,6 @@
 
 skinparam classAttributeIconSize 0
 
-title Availability
-
 class Availability {
   -dayAvailability: bool
   -nightAvailability: bool  
