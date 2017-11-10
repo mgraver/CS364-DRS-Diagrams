@@ -1,0 +1,19 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Event {
+  -day : Day
+  -start : Time
+  -users : List<user>
+  +getTime() : Time
+  +setTime(Time) : void
+  +getDay() : Day
+  +setDay(Day) : void
+  +getUsers() : List<user>
+  +setUsers(List<user>) : void
+  +delete() : void
+  
+}
+
+@enduml
