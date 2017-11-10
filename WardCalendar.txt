@@ -2,13 +2,11 @@
 
 skinparam classAttributeIconSize 0
 
-title WardCalendar
-
 class WardCalendar {
   +daysOfMonth : Array<Day>
-  +Month: string
-  +Year: Int
-  +Date: Int
+  +Month : string
+  +Year : Int
+  +Date : Int
   +notification : bool
   +WardCalendar()
   +WardCalendar(string, int, int)
@@ -24,7 +22,7 @@ class WardCalendar {
   +displayWeek() : void
   +displayDay() : void
   +sendNotification() : Vector<Event>
-  +addDay( Day, int) : void
+  +addDay(Day, int) : void
 }
 
 @enduml
