@@ -1,6 +1,7 @@
 @startuml
+skinparam classAttributeIconSize 0
 
-class Calendar {
+abstract class AbstractCalendar {
   #daysOfMonth : Array<Day>
   #Month: string
   #Year: Int
@@ -14,7 +15,9 @@ class Calendar {
   +setYear( ): Int
   +setDate() : Int
   +setDaysOfMonth(int, Day) : void
+  
 }
+
 
 class WardCalendar {
   +notification : bool
@@ -31,7 +34,7 @@ class PersonalCalendar {
   +PersonalCalendar(string, int, int)
 }
 
-Calendar <|--  WardCalendar
-Calendar <|--  PersonalCalendar
+AbstractCalendar <|--  WardCalendar
+AbstractCalendar <|--  PersonalCalendar
 
 @enduml
