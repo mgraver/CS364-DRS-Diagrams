@@ -9,22 +9,21 @@ class WardCalendar {
   +Year: Int
   +Date: Int
   +notification : bool
-+      WardCalendar()
-+      WardCalendar(string, int, int)
-+      getMonth() : String
-+      getDays() : int
-+      getDaysOfMonth() : * Day
-+      getYear() : int
-+      setMonth(string) : void
-+      setDays(string) : void
-+      setDaysOfMonth(int, Day) : void
-+      setYear(int) : void
-+      displayMonth() : void
-+      displayWeek() : void
-+      displayDay() : void
-+      sendNotification() : Vector<Event>
-+      addDay( Day, int) : void
-
+  +WardCalendar()
+  +WardCalendar(string, int, int)
+  +getMonth() : String
+  +getDays() : int
+  +getDaysOfMonth() : * Day
+  +getYear() : int
+  +setMonth(string) : void
+  +setDays(string) : void
+  +setDaysOfMonth(int, Day) : void
+  +setYear(int) : void
+  +displayMonth() : void
+  +displayWeek() : void
+  +displayDay() : void
+  +sendNotification() : Vector<Event>
+  +addDay( Day, int) : void
 }
 
 @enduml
