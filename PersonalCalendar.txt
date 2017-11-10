@@ -3,15 +3,15 @@ skinparam classAttributeIconSize 0
 
 class PersonalCalendar {
   +daysOfMonth : Array<Day>
-  +Month: string
-  +Year: Int
-  +Date: Int
+  +Month : string
+  +Year : Int
+  +Date : Int
   +PersonalCalendar(string, int, int)
   +getMonth() : String
   +getYear() : Int
   +getDate() : Int
   +setMonth() : void
-  +setYear( ): Int
+  +setYear( ) : Int
   +setDate() : Int
 
 }
