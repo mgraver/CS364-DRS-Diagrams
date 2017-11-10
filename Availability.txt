@@ -3,10 +3,10 @@
 skinparam classAttributeIconSize 0
 
 class Availability {
-  -dayAvailability: bool
-  -nightAvailability: bool  
-  -dayRepeat: bool
-  -nightRepeat: bool  
+  -dayAvailability : bool
+  -nightAvailability : bool  
+  -dayRepeat : bool
+  -nightRepeat : bool  
   +toggle(bool day, bool night, bool dayRepeat, bool nightRepeat) : void
   +getDayAvailability() : bool
   +getNightAvailability() : bool
