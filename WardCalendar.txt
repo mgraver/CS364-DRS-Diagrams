@@ -3,14 +3,14 @@
 skinparam classAttributeIconSize 0
 
 class WardCalendar {
-  +daysOfMonth : Array<Day>
-  +Month : string
-  +Year : Int
-  +Date : Int
-  +notification : bool
+  -daysOfMonth : Array<Day>
+  -month : string
+  -year : int
+  -day : int
+  -notification : bool
   +WardCalendar()
   +WardCalendar(string, int, int)
-  +getMonth() : String
+  +getMonth() : string
   +getDays() : int
   +getDaysOfMonth() : Day
   +getYear() : int
@@ -21,7 +21,7 @@ class WardCalendar {
   +displayMonth() : void
   +displayWeek() : void
   +displayDay() : void
-  +sendNotification() : Vector<Event>
+  +sendNotification() : List<Event>
   +addDay(Day, int) : void
 }
 
