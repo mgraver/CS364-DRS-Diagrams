@@ -4,18 +4,18 @@ skinparam classAttributeIconSize 0
 
 class WardCalendar {
   -daysOfMonth : List<Day>
-  -month : string
+  -month : MonthNames
   -year : int
   -day : int
   -notification : bool
   +WardCalendar()
-  +WardCalendar(string, int, int)
-  +getMonth() : string
-  +getDays() : int
+  +WardCalendar(MonthNames, int, int)
+  +getMonth() : MonthNames
+  +getDay() : int
   +getDaysOfMonth() : Day
   +getYear() : int
-  +setMonth(string) : void
-  +setDays(string) : void
+  +setMonth(MonthNames) : void
+  +setDay(int) : void
   +setDaysOfMonth(int, Day) : void
   +setYear(int) : void
   +displayMonth() : void
@@ -23,6 +23,21 @@ class WardCalendar {
   +displayDay() : void
   +sendNotification() : List<Event>
   +addDay(Day, int) : void
+}
+
+enum MonthNames {
+    January, 
+    February,
+    March,
+    April,
+    May,
+    June,
+    July,
+    August,
+    September,
+    October,
+    November,
+    December
 }
 
 @enduml
