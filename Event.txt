@@ -3,13 +3,13 @@
 skinparam classAttributeIconSize 0
 
 class Event {
-  -day : Day
+  -date : Date
   -start : Time
   -users : List<user>
   +getTime() : Time
   +setTime(Time) : void
-  +getDay() : Day
-  +setDay(Day) : void
+  +getDate() : Date
+  +setDate(Date) : void
   +getUsers() : List<user>
   +setUsers(List<user>) : void
   +delete() : void
