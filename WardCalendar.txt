@@ -3,7 +3,7 @@
 skinparam classAttributeIconSize 0
 
 class WardCalendar {
-  -daysOfMonth : Array<Day>
+  -daysOfMonth : List<Day>
   -month : string
   -year : int
   -day : int
