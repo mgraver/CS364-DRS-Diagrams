@@ -14,19 +14,17 @@ class Calendar {
   +setYear( ): Int
   +setDate() : Int
   +setDaysOfMonth(int, Day) : void
-  
 }
-
 
 class WardCalendar {
   +notification : bool
-+      WardCalendar()
-+      WardCalendar(string, int, int)
-+      displayMonth() : void
-+      displayWeek() : void
-+      displayDay() : void
-+      sendNotification() : Vector<Event>
-+      addDay(Day, int) : void
+  +WardCalendar()
+  +WardCalendar(string, int, int)
+  +displayMonth() : void
+  +displayWeek() : void
+  +displayDay() : void
+  +sendNotification() : Vector<Event>
+  +addDay(Day, int) : void
 }
 
 class PersonalCalendar {
