@@ -1,28 +1,49 @@
 @startuml
 
-skinparam classAttributeIconSize 0
 
-class WardCalendar {
-  -daysOfMonth : List<Day>
-  -month : MonthNames
+class Calendar {
+  -years : KeyValue<int, Year>
+  +getYears() : KeyValue<int, Year>
+  +setYears(KeyValue<int, Year>) : void
+  +getYear(int) : Year
+  +setYear(Year) : void
+}
+
+class Year {
+  -months : KeyValue<MonthNames, Month>
   -year : int
-  -day : int
-  -notification : bool
-  +WardCalendar()
-  +WardCalendar(MonthNames, int, int)
-  +getMonth() : MonthNames
-  +getDay() : int
-  +getDaysOfMonth() : Day
   +getYear() : int
-  +setMonth(MonthNames) : void
-  +setDay(int) : void
-  +setDaysOfMonth(int, Day) : void
   +setYear(int) : void
-  +displayMonth() : void
-  +displayWeek() : void
-  +displayDay() : void
-  +sendNotification() : List<Event>
-  +addDay(Day, int) : void
+  +getMonths() : KeyValue<MonthNames, Month>
+  +setMonths(KeyValue<MonthNames, Month>) : void
+  +getMonth(MonthNames) : Month
+  +setMonth(Month) : void
+}
+
+class Month {
+  -days : KeyValue<int, Day>
+  +getDays() : KeyValue<int, Day>
+  +setDays(KeyValue<int, Day>) : void
+  +getDay(int) : Day
+  +setDay(Day) : void
+}
+
+class Day {
+  -hours : KeyValue<int, Hour>
+  +getHours() : KeyValue<int, Hour>
+  +setHours(KeyValue<int, Hour>) : void
+  +getHour(int) : Hour
+  +setHour(Hour) : void
+}
+
+class Hour {
+  -events : List<Event>
+  +getEvents() : List<Event>
+  +setEvents(List<Event>) : void
+  +addEvent(Event) : void
+  +deleteEvent(Event) : void
+  +addEvents(List<Event>) : void
+  +deleteEvents(List<Event>) : void
 }
 
 enum MonthNames {
@@ -40,4 +61,42 @@ enum MonthNames {
     December
 }
 
+abstract class Event {
+  -date : Date
+  -start : Time
+  -sendNotification : bool
+  -title : string
+  -description : string
+  +getTime() : Time
+  +setTime(Time) : void
+  +getDate() : Date
+  +setDate(Date) : void
+  +enableSendNotification() : void
+  +disableSendNotification() : void
+  +toggleSendNotification() : void
+  +delete() : void
+  +getTitle() : string
+  +setTitle(string) : void
+  +getDescription() : string
+  +setDescription(string) : void
+}
+
+class ScheduledEvent {
+  -users : List<user>
+  +getUsers() : List<user>
+  +setUsers(List<user>) : void
+
+}
+
+class Appointment {
+  -availability : Availability 
+  -teacher : Teacher
+  -teachee : Teachee
+  +Appointment(Date, Time, Teacher, Teachee)
+}
+
+Calendar <|-- WardCalendar
+Calendar <|-- PersonalCalendar
+Event <|-- ScheduledEvent
+Event <|-- Appointment
 @enduml
