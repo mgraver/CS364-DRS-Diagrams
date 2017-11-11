@@ -76,7 +76,6 @@ class Teachee {
 
 class Teacher {
     +assignedCompanionship : Companionship
-    +assignedAssignents : List<Assignent>
 }
 
 class Companionship {
@@ -93,7 +92,12 @@ class Assignent {
 }
 
 class ContactRecord {
+    +visits : List<Visit>
+}
 
+class Visit {
+    +assignent : Assignent
+    +date: Date
 }
 
 Member <|-- User
@@ -111,4 +115,6 @@ Assignent o-- Teachee : > has 1..*
 Companionship o-- Assignent : > has 1..*
 Companionship o-- Teacher : > has 1..*
 Companionship o-- ContactRecord : > has 1
+ContactRecord o-- Visit : > has 0..*
+Visit o-- Assignent : > has 1
 @enduml
