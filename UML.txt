@@ -71,25 +71,25 @@ enum Permission {
 }
 
 class Teachee {
-    assignedAssignent : Assignent
+    +assignedAssignent : Assignent
 }
 
 class Teacher {
-    assignedCompanionship : Companionship
-    assignedAssignents : List<Assignent>
+    +assignedCompanionship : Companionship
+    +assignedAssignents : List<Assignent>
 }
 
 class Companionship {
-    teachers : List<Teacher>
-    assignents : List<Assignent>
-    isDraft : bool
-    effectiveDate : Date
-    contactRecord : ContactRecord
+    +teachers : List<Teacher>
+    +assignents : List<Assignent>
+    +isDraft() : bool
+    +effectiveDate : Date
+    +contactRecord : ContactRecord
 }
 
 class Assignent {
-    assignedCompanionship : Companionship
-    teachees : List<Teachee>
+    +assignedCompanionship : Companionship
+    +teachees : List<Teachee>
 }
 
 class ContactRecord {
@@ -107,5 +107,8 @@ ContactInformation *-- PhoneNumber : > has 1..*
 PhoneNumber *-- PhoneType : > has 1
 ContactInformation *-- Address : > has 1..*
 Address *-- AddressType  : > has 1
-
+Assignent o-- Teachee : > has 1..*
+Companionship o-- Assignent : > has 1..*
+Companionship o-- Teacher : > has 1..*
+Companionship o-- ContactRecord : > has 1
 @enduml
