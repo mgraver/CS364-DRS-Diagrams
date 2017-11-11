@@ -1,0 +1,111 @@
+@startuml
+
+abstract class User {
+    +username : string
+    +password : string
+    +isAuthenticated() : bool
+    +roles : List<Role>
+    +hasPermission(Permission) : bool
+}
+
+abstract class Member {
+    +contactInformation : ContactInformation
+    +birthday : Date
+    +doNotVisit : bool
+    +personalCalendar : PersonalCalendar
+}
+
+class ContactInformation {
+  +name : string
+  +phoneNumbers : List<PhoneNumber>
+  +addresses : List<Address>
+  +emailAddress : string
+}
+
+class PhoneNumber {
+  +number : string
+  +type : PhoneType
+}
+
+enum PhoneType {
+    Home
+    Cell
+    Fax
+    Work
+}
+
+class Address {
+  +addressLine1 : string
+  +addressLine2 : string
+  +addressLine3 : string
+  +addressLine4 : string
+  +addressLine5 : string
+  +city : string
+  +stateOrProvince : string
+  +postalCode : string
+  +county : string
+  +country : string
+  +addressType : AddressType
+}
+
+enum AddressType {
+    Home
+    Work
+}
+
+class Role {
+    +name : string
+    +permissions : List<Permission>
+}
+
+enum Permission {
+    ViewMemberContactInformation
+    ResetPassword
+    CreateAssignment
+    UpdateAssignment
+    DeleteAssignment
+    CreateCompanionship
+    UpdateCompanionship
+    DeleteCompanionship
+    ...TBD
+}
+
+class Teachee {
+    assignedAssignent : Assignent
+}
+
+class Teacher {
+    assignedCompanionship : Companionship
+    assignedAssignents : List<Assignent>
+}
+
+class Companionship {
+    teachers : List<Teacher>
+    assignents : List<Assignent>
+    isDraft : bool
+    effectiveDate : Date
+    contactRecord : ContactRecord
+}
+
+class Assignent {
+    assignedCompanionship : Companionship
+    teachees : List<Teachee>
+}
+
+class ContactRecord {
+
+}
+
+Member <|-- User
+User <|-- Teachee
+User <|-- Teacher
+User <|-- Leader
+User o-- Role : > has 1..*
+Role *-- Permission : > has 1..*
+Member *-- ContactInformation : > has 1..*
+ContactInformation *-- PhoneNumber : > has 1..*
+PhoneNumber *-- PhoneType : > has 1
+ContactInformation *-- Address : > has 1..*
+Address *-- AddressType  : > has 1
+
+@enduml
