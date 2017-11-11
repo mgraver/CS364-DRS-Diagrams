@@ -1,0 +1,40 @@
+Start Time
+Duration
+Reminder
+Notification
+Appointment
+Availability
+Event
+Personal Calendar
+Ward Calendar
+Password Authentication
+Key Authentication
+Permission
+Database
+Messages
+Chat Area
+Chat History
+Chat Message
+Monthly Message View
+Teaching Report
+Statistics report
+Reporting Deadline
+Report to Leadership
+User Reviews
+Visit
+Visit Type
+Crash Report
+Google Maps API
+Notes
+Preferences
+LDS Tools API
+LCR Web Tools
+Teacher Contact Record
+Contact information
+Companionship
+Assignment
+Teacher
+Member
+Leaders/ Leadership
+User
+Teachee
