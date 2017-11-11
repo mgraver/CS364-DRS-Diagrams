@@ -1,0 +1,14 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Appointment {
+  -availability : Availability 
+  -date : Date
+  -start : Time
+  -teacher : Teacher
+  -teachee : Teachee
+  +Appointment(Date, Time, Teacher, Teachee)
+}
+
+@enduml
