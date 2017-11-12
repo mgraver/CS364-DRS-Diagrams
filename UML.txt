@@ -1,5 +1,4 @@
 @startuml
-
 abstract class User {
     +username : string
     +password : string
@@ -114,7 +113,7 @@ Address *-- AddressType  : > has 1
 Assignent o-- Teachee : > has 1..*
 Companionship o-- Assignent : > has 1..*
 Companionship o-- Teacher : > has 1..*
-Companionship o-- ContactRecord : > has 1
-ContactRecord o-- Visit : > has 0..*
-Visit o-- Assignent : > has 1
+Companionship *-- ContactRecord : > has 1
+ContactRecord *-- Visit : > has 0..*
+Visit *-- Assignent : > has 1
 @enduml
