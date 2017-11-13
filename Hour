@@ -1,0 +1,15 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Hour {
+  +events : List<Event>
+  +name : int
+  +addEvent(Event) : void
+  +updateEvent(Event) : void
+  +deleteEvent(Event) : void
+  +addEvents(List<Event>) : void
+  +deleteEvents(List<Event>) : void
+}
+
+@enduml
