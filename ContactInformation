@@ -1,0 +1,12 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class ContactInformation {
+  +name : string
+  +phoneNumbers : List<PhoneNumber>
+  +addresses : List<Address>
+  +emailAddress : string
+}
+
+@enduml
