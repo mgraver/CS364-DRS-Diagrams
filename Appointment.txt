@@ -2,11 +2,16 @@
 
 skinparam classAttributeIconSize 0
 
+abstract class Event {
+}
+
 class Appointment {
   +availability : Availability
   +assignent  : Assignent
   +date : Date
   +time : Time
 }
+
+Event <|-- Appointment
 
 @enduml
