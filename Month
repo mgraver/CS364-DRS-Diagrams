@@ -25,7 +25,5 @@ enum MonthNames {
     December
 }
 
-Year *-- Month
-Month *-- Day
-Month o-- MonthNames
+Month o-right- MonthNames : > has 1
 @enduml
