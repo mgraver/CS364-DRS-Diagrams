@@ -1,0 +1,35 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+abstract class Event {
+  -sendNotification : bool
+  +date : Date
+  +start : Time
+  +title : string
+  +description : string
+  +enableSendNotification() : void
+  +disableSendNotification() : void
+  +toggleSendNotification() : void
+  +delete() : void
+}
+
+class ScheduledEvent {
+  -users : List<user>
+  +getUsers() : List<user>
+  +setUsers(List<user>) : void
+
+}
+
+class Appointment {
+  +assignent  : Assignent
+  +date : Date
+  +time : Time
+}
+
+Event <|-- ScheduledEvent
+Event <|-- Appointment
+
+Hour o-- Event
+
+@enduml
