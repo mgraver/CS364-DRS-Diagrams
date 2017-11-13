@@ -3,12 +3,12 @@
 skinparam classAttributeIconSize 0
 
 class Companionship {
-    +teachers : List<Teacher>
+    +teachers : List<User>
     +assignents : List<Assignent>
     +isDraft() : bool
     +effectiveDate : Date
     +expireDate : Date
-    +contactRecord : ContactRecord
+    +teacherContactRecord : TeacherContactRecord
 }
 
 @enduml
