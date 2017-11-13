@@ -14,7 +14,4 @@ abstract class Event {
   +delete() : void
 }
 
-Event <|-- ScheduledEvent
-Event <|-- Appointment
-
 @enduml
