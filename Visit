@@ -1,0 +1,10 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Visit {
+    +assignent : Assignent
+    +date: Date
+}
+
+@enduml
