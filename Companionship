@@ -1,0 +1,13 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Companionship {
+    +teachers : List<Teacher>
+    +assignents : List<Assignent>
+    +isDraft() : bool
+    +effectiveDate : Date
+    +contactRecord : ContactRecord
+}
+
+@enduml
