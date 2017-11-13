@@ -1,0 +1,31 @@
+@startuml
+
+class Month {
+  +days : KeyValue<int, Day>
+  +name : MonthNames
+  +getDay(int) : Day
+  +addDay(Day) : void
+  +updateDay(Day) : void
+  +deleteDay(Day) : void
+}
+
+
+enum MonthNames {
+    January, 
+    February,
+    March,
+    April,
+    May,
+    June,
+    July,
+    August,
+    September,
+    October,
+    November,
+    December
+}
+
+Year *-- Month
+Month *-- Day
+Month o-- MonthNames
+@enduml
