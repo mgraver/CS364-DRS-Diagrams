@@ -2,33 +2,14 @@
 
 skinparam classAttributeIconSize 0
 
-class PersonalCalendar {
-  -daysOfMonth : List<Day>
-  -month : MonthNames
-  -year : int
-  -day : int
-  +PersonalCalendar(MonthNames, int, int)
-  +getMonth() : MonthNames
-  +setMonth(MonthNames) : void
-  +getYear() : int
-  +setYear(int) : void
-  +getDay() : int
-  +setDay(int) : void
+abstract class Calendar {
+  +years : KeyValue<int, Year>
+  +getYear(int) : Year
+  +addYear(Year) : void
+  +updateYear(Year) : void
+  +deleteYear(Year) : void
 }
 
-enum MonthNames {
-    January, 
-    February,
-    March,
-    April,
-    May,
-    June,
-    July,
-    August,
-    September,
-    October,
-    November,
-    December
-}
+Calendar <|-- PersonalCalendar
 
 @enduml
