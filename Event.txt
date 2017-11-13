@@ -1,3 +1,7 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
 abstract class Event {
   +date : Date
   +start : Time
@@ -53,5 +57,3 @@ Event <|-- ScheduledEvent
 Event <|-- Appointment
 
 @enduml
-
-}
