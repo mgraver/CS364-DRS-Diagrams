@@ -7,6 +7,7 @@ class Companionship {
     +assignents : List<Assignent>
     +isDraft() : bool
     +effectiveDate : Date
+    +expireDate : Date
     +contactRecord : ContactRecord
 }
 
