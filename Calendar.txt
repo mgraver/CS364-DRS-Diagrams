@@ -1,40 +1,108 @@
 @startuml
-skinparam classAttributeIconSize 0
 
-abstract class AbstractCalendar {
-  #daysOfMonth : Array<Day>
-  #Month: string
-  #Year: Int
-  #Date: Int
-  +Calendar(string, int, int)
-  +getMonth() : String
-  +getYear() : Int
-  +getDate() : Int
-  +getDaysOfMonth() : Day
-  +setMonth() : void
-  +setYear( ): Int
-  +setDate() : Int
-  +setDaysOfMonth(int, Day) : void
-  
+abstract class Calendar {
+  +years : KeyValue<int, Year>
+  +getYear(int) : Year
+  +addYear(Year) : void
+  +updateYear(Year) : void
+  +deleteYear(Year) : void
 }
 
-
-class WardCalendar {
-  +notification : bool
-  +WardCalendar()
-  +WardCalendar(string, int, int)
-  +displayMonth() : void
-  +displayWeek() : void
-  +displayDay() : void
-  +sendNotification() : Vector<Event>
-  +addDay(Day, int) : void
+class Year {
+  +months : KeyValue<MonthNames, Month>
+  +name : int
+  +getMonth(MonthNames) : Month
+  +addMonth(Month) : void
+  +updateMonth(Month) : void
+  +deleteMonth(Month) : void
 }
 
-class PersonalCalendar {
-  +PersonalCalendar(string, int, int)
+class Month {
+  +days : KeyValue<int, Day>
+  +name : MonthNames
+  +getDay(int) : Day
+  +addDay(Day) : void
+  +updateDay(Day) : void
+  +deleteDay(Day) : void
 }
 
-AbstractCalendar <|--  WardCalendar
-AbstractCalendar <|--  PersonalCalendar
+class Day {
+  +hours : KeyValue<int, Hour>
+  +name : int
+  +getHour(int) : Hour
+  +addHour(Hour) : void
+  +updateHour(Hour) : void
+  +deleteHour(Hour) : void
+}
 
+class Hour {
+  +events : List<Event>
+  +name : int
+  +addEvent(Event) : void
+  +updateEvent(Event) : void
+  +deleteEvent(Event) : void
+  +addEvents(List<Event>) : void
+  +deleteEvents(List<Event>) : void
+}
+
+enum MonthNames {
+    January, 
+    February,
+    March,
+    April,
+    May,
+    June,
+    July,
+    August,
+    September,
+    October,
+    November,
+    December
+}
+
+abstract class Event {
+  -date : Date
+  -start : Time
+  -sendNotification : bool
+  -title : string
+  -description : string
+  +getTime() : Time
+  +setTime(Time) : void
+  +getDate() : Date
+  +setDate(Date) : void
+  +enableSendNotification() : void
+  +disableSendNotification() : void
+  +toggleSendNotification() : void
+  +delete() : void
+  +getTitle() : string
+  +setTitle(string) : void
+  +getDescription() : string
+  +setDescription(string) : void
+}
+
+class ScheduledEvent {
+  -users : List<user>
+  +getUsers() : List<user>
+  +setUsers(List<user>) : void
+
+}
+
+class Appointment {
+  +availability : Availability
+  +assignent  : Assignent
+  +date : Date
+  +time : Time
+}
+
+Calendar <|-- WardCalendar
+Calendar <|-- PersonalCalendar
+Event <|-- ScheduledEvent
+Event <|-- Appointment
+
+Calendar *-- Year
+Year *-- Month
+Month *-- Day
+Day *-- Hour
+Hour o-- Event
+Month o-- MonthNames
 @enduml
