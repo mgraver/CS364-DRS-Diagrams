@@ -62,49 +62,21 @@ enum MonthNames {
     December
 }
 
-abstract class Event {
-  -date : Date
-  -start : Time
-  -sendNotification : bool
-  -title : string
-  -description : string
-  +getTime() : Time
-  +setTime(Time) : void
-  +getDate() : Date
-  +setDate(Date) : void
-  +enableSendNotification() : void
-  +disableSendNotification() : void
-  +toggleSendNotification() : void
-  +delete() : void
-  +getTitle() : string
-  +setTitle(string) : void
-  +getDescription() : string
-  +setDescription(string) : void
+class PersonalCalendar {
+    +user : User
 }
 
-class ScheduledEvent {
-  -users : List<user>
-  +getUsers() : List<user>
-  +setUsers(List<user>) : void
-
-}
-
-class Appointment {
-  +availability : Availability
-  +assignent  : Assignent
-  +date : Date
-  +time : Time
+class WardCalendar {
+    +ward : Ward
 }
 
 Calendar <|-- WardCalendar
 Calendar <|-- PersonalCalendar
-Event <|-- ScheduledEvent
-Event <|-- Appointment
 
 Calendar *-- Year
 Year *-- Month
 Month *-- Day
 Day *-- Hour
-Hour o-- Event
-Month o-- MonthNames
+Month o-right- MonthNames
+Hour o-right- Event
 @enduml
