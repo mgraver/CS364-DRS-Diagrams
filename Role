@@ -1,0 +1,24 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Role {
+    +name : string
+    +permissions : Set<Permission>
+}
+
+enum Permission {
+    ViewMemberContactInformation
+    ResetPassword
+    CreateAssignment
+    UpdateAssignment
+    DeleteAssignment
+    CreateCompanionship
+    UpdateCompanionship
+    DeleteCompanionship
+    ...TBD
+}
+
+Role *-right- Permission : > has 1..*
+
+@enduml
