@@ -2,15 +2,10 @@
 
 skinparam classAttributeIconSize 0
 
-abstract class Event {
-}
-
 class ScheduledEvent {
   -users : List<user>
   +getUsers() : List<user>
   +setUsers(List<user>) : void
 }
-
-Event <|-- ScheduledEvent
 
 @enduml
