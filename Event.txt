@@ -3,54 +3,15 @@
 skinparam classAttributeIconSize 0
 
 abstract class Event {
+  -sendNotification : bool
   +date : Date
   +start : Time
-  -sendNotification : bool
-  +title : string
-  -description : string
-  +enableSendNotification() : void
-  +disableSendNotification() : void
-  +toggleSendNotification() : void
-  +delete() : void
-  +getDescription() : string
-  +setDescription(string) : void
-}
-
-class ScheduledEvent {
-  -users : List<user>
-  +getUsers() : List<user>
-  +setUsers(List<user>) : void
-}
-
-class Appointment {
-  +availability : Availability
-  +assignent  : Assignent
-  +date : Date
-  +time : Time@startuml
-
-abstract class Event {
-  +date : Date
-  +start : Time
-  -sendNotification : bool
   +title : string
   +description : string
   +enableSendNotification() : void
   +disableSendNotification() : void
   +toggleSendNotification() : void
   +delete() : void
-}
-
-class ScheduledEvent {
-  -users : List<user>
-  +getUsers() : List<user>
-  +setUsers(List<user>) : void
-}
-
-class Appointment {
-  +availability : Availability
-  +assignent  : Assignent
-  +date : Date
-  +time : Time
 }
 
 Event <|-- ScheduledEvent
