@@ -54,7 +54,7 @@ enum AddressType {
 
 class Role {
     +name : string
-    +permissions : List<Permission>
+    +permissions : Set<Permission>
 }
 
 enum Permission {
