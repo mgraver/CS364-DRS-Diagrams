@@ -1,5 +1,7 @@
 @startuml
 
+skinparam classAttributeIconSize 0
+
 abstract class Calendar {
   +years : KeyValue<int, Year>
   +getYear(int) : Year
