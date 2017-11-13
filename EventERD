@@ -30,6 +30,6 @@ class Appointment {
 Event <|-- ScheduledEvent
 Event <|-- Appointment
 
-Hour o-- Event
+Hour o-- Event : > has 1..*
 
 @enduml
