@@ -1,5 +1,7 @@
 @startuml
 
+skinparam classAttributeIconSize 0
+
 abstract class Calendar {
 }
 
