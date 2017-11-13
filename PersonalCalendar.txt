@@ -2,30 +2,8 @@
 
 skinparam classAttributeIconSize 0
 
-class Month {
-  +days : KeyValue<int, Day>
-  +name : MonthNames
-  +getDay(int) : Day
-  +addDay(Day) : void
-  +updateDay(Day) : void
-  +deleteDay(Day) : void
+class PersonalCalendar {
+    user : User
 }
 
-
-enum MonthNames {
-    January, 
-    February,
-    March,
-    April,
-    May,
-    June,
-    July,
-    August,
-    September,
-    October,
-    November,
-    December
-}
-
-Month o-right- MonthNames
 @enduml
