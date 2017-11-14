@@ -1,15 +1,21 @@
 @startuml
 
+skinparam classAttributeIconSize 0
+
 class AuthenticationService {
-    authenticationProvidor : IAuthenticationProvidor
+    -authenticationProvidor : IAuthenticationProvidor
+    +authenticate(User user, string password) : bool
 }
 
 interface IAuthenticationProvidor {
-    authenticate(User user, string password) : bool
+    ~authenticate(User user, string password) : bool
 }
 
 class LdsDotOrgAuthenticationProvidor {
-    authenticate(User user, string password) : bool
+    -authenticateWithLdsDotOrg(User user, string password) : bool
+    ~authenticate(User user, string password) : bool
 }
 
+IAuthenticationProvidor <|-- LdsDotOrgAuthenticationProvidor
+AuthenticationService o-- IAuthenticationProvidor
 @enduml
