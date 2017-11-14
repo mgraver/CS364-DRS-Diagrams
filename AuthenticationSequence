@@ -1,0 +1,20 @@
+@startuml
+
+title "Authentication - Sequence Diagram"
+
+actor User
+
+User -> GUI : Login
+GUI -> UserObject : Create User Object
+UserObject -> GUI : Return User Object
+GUI -> UserObject : isAuthenticated()
+UserObject -> AuthenticationService : authenticate()
+AuthenticationService -> LdsDotOrgAuthenticationProvidor : authenticate()
+LdsDotOrgAuthenticationProvidor -> LdsDotOrgAuthenticationProvidor : authenticateWithLdsDotOrg()
+LdsDotOrgAuthenticationProvidor -> Lds.org : Authentication Request
+Lds.org -> LdsDotOrgAuthenticationProvidor : Authentication Response
+AuthenticationService <- LdsDotOrgAuthenticationProvidor : true or false
+UserObject <- AuthenticationService : true or false
+GUI <- UserObject : true or false
+User <- GUI : Result
+@enduml
