@@ -4,6 +4,7 @@ skinparam classAttributeIconSize 0
 
 class Message{
     +isSent: bool
+    +type: MessageType
     +message: string
 }
 @enduml
