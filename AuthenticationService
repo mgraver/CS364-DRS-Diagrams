@@ -1,0 +1,15 @@
+@startuml
+
+class AuthenticationService {
+    authenticationProvidor : IAuthenticationProvidor
+}
+
+interface IAuthenticationProvidor {
+    authenticate(User user, string password) : bool
+}
+
+class LdsDotOrgAuthenticationProvidor {
+    authenticate(User user, string password) : bool
+}
+
+@enduml
