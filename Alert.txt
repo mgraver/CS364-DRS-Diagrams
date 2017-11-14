@@ -1,0 +1,34 @@
+@startuml
+class Reminder {
+    +eventTime: Date
+    +minBefore: <MinBefore>
+    +message: string
+    +type: Set<ReminderType>
+}
+
+enum MinBefore{
+    5
+    10
+    15
+    30
+    1440
+}
+
+enum ReminderType{
+    Email
+    DesktopNotification
+    MobileNotification
+    Text
+}
+
+class Notification{
+    +snoozeDuration: int
+    +hasDisplayed(): bool
+    +isSnoozed(): bool
+    +isDismissed(): bool
+}
+
+Reminder *-right- ReminderType : > has 1..*
+Reminder -left- MinBefore : > has 1..1
+Reminder -down-> Notification : > has 1..1
+@enduml
