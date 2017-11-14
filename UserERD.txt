@@ -3,6 +3,7 @@
 skinparam classAttributeIconSize 0
 
 class User {
+    -isAuthenticated : bool
     +username : string
     +password : string
     +isAuthenticated() : bool
