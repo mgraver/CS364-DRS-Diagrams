@@ -1,5 +1,9 @@
 @startuml
+
+skinparam classAttributeIconSize 0
+
 class Message{
+    +isSent: bool
     +message: string
 }
 @enduml
