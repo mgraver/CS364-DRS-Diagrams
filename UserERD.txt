@@ -1,4 +1,7 @@
 @startuml
+
+skinparam classAttributeIconSize 0
+
 class User {
     +username : string
     +password : string
