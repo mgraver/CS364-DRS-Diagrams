@@ -32,3 +32,38 @@ Reminder *-right- ReminderType : > has 1..*
 Reminder -left- MinBefore : > has 1..1
 Reminder -down-> Notification : > has 1..1
 @enduml
+
+==================== Nicks Version ============================
+
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Reminder {
+    -isDismissed : bool
+    -hasDisplayed : bool
+    +event : Event
+    +triggerTime : Time
+    +triggerDate : Date
+    +message : string
+    +type : ReminderType
+    +snoozeDuration : int
+    +hasDisplayed() : bool
+    +enableDisplayed() : void
+    +disableDisplayed() : void
+    +isReadyToDisplay() : bool
+    +isSnoozed() : bool
+    +snooze(int) : void
+    +isDismissed(): bool
+    +dismiss(): void
+    +hasTriggerDateTimePassed() : bool
+}
+
+enum ReminderType{
+    Email
+    DesktopNotification
+    MobileNotification
+    Text
+}
+Reminder *-right- ReminderType : > has 1
+@enduml
