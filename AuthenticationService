@@ -3,19 +3,13 @@
 skinparam classAttributeIconSize 0
 
 class AuthenticationService {
-    -authenticationProvidor : IAuthenticationProvidor
-    +authenticate(User user, string password) : bool
-}
-
-interface IAuthenticationProvidor {
-    ~authenticate(User user, string password) : bool
+    {static} +authenticate(User user, string password) : bool
 }
 
 class LdsDotOrgAuthenticationProvidor {
-    -authenticateWithLdsDotOrg(User user, string password) : bool
-    ~authenticate(User user, string password) : bool
+    {static} -authenticateWithLdsDotOrg(User user, string password) : bool
+    {static} ~authenticate(User user, string password) : bool
 }
 
-IAuthenticationProvidor <|-- LdsDotOrgAuthenticationProvidor
-AuthenticationService o-- IAuthenticationProvidor
+AuthenticationService *-- LdsDotOrgAuthenticationProvidor
 @enduml
