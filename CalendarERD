@@ -81,6 +81,6 @@ Calendar *-- Year : > has 1..*
 Year *-- Month : > has 12
 Month *-- Day : > has 28..31
 Day *-- Hour : > has 24
-Month o-right- MonthNames : > has 1
+Month *-right- MonthNames : > has 1
 Hour o-right- Event : > has 1..*
 @enduml
