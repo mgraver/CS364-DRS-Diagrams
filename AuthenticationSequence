@@ -21,9 +21,20 @@ Lds.org -> LdsDotOrgAuthenticationProvidor : Authentication Response
 AuthenticationService <- LdsDotOrgAuthenticationProvidor : true or false
 UserObject <- AuthenticationService : true or false
 GUI <- UserObject : true or false
-GUI -> UserObject : hasTwoFactorAuthenticaton
-GUI <- UserObject : true or false
-User <- GUI : Challange Request 
-User -> GUI : Challange Response
-User <- GUI : Result
+alt true
+    GUI -> UserObject : hasTwoFactorAuthenticaton
+    GUI <- UserObject : true or false
+    alt User has Two Factor Authenticaton
+        User <- GUI : Challange Request 
+        User -> GUI : Challange Response
+        alt Challange Success
+            GUI <- GUI : Success Result
+        else Challange Failed
+            User <- GUI : Challange Failure Result
+        end
+    end
+    User <- GUI : Success Result
+else false
+    User <- GUI : Failure Result
+end
 @enduml
