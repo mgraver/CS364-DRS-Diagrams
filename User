@@ -1,0 +1,16 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class User {
+    +username : string
+    +password : string
+    +isAuthenticated() : bool
+    +roles : List<Role>
+    +hasPermission(Permission) : bool
+    +contactInformation : ContactInformation
+    +birthday : Date
+    +doNotVisit : bool
+    +personalCalendar : PersonalCalendar
+}
+@enduml
