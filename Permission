@@ -1,0 +1,15 @@
+@startuml
+
+enum Permission {
+    ViewMemberContactInformation
+    ResetPassword
+    CreateAssignment
+    UpdateAssignment
+    DeleteAssignment
+    CreateCompanionship
+    UpdateCompanionship
+    DeleteCompanionship
+    ...TBD
+}
+
+@enduml
