@@ -3,9 +3,10 @@
 skinparam classAttributeIconSize 0
 
 class ChatMessage{
-    +isSent: bool
+    +isNullOrEmpty: bool
     +type: ChatMessageType
     +message: string
+    +notification: Reminder
 }
 
 enum ChatMessageType{
