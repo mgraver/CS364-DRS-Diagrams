@@ -1,0 +1,16 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Notes {
+   +user : User
+   +author : User
+   +message : string
+   +privacyLevel : PrivacyLevel
+}
+
+enum PrivacyLevel {
+   Private
+   Confidential
+   Public
+}
+Notes *-right- PrivacyLevel : > has 1
+@enduml

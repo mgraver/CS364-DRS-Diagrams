@@ -1,0 +1,8 @@
+@startuml
+skinparam classAttributeIconSize 0
+class LDSToolsClient {
+	{static}+syncAppToLDSTools() : void
+	{static}+pullMemberInfo(User) : void
+	{static}+getPermissions(User) : Set<Permissions>
+}
+@enduml

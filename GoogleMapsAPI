@@ -1,0 +1,8 @@
+@startuml
+skinparam classAttributeIconSize 0
+class GoogleMapsClient {
+	{static}+openGoogleMapsToAddress(Address):void
+	{static}+openGoogleMapsAndNavagateToAddress(Address):void
+	{static}+getGeoLocation(Address):GeoLocation
+}
+@enduml

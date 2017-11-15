@@ -1,0 +1,13 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Preferences {
+	+user : User
+	+language : LanguageLocalization
+}
+enum LanguageLocalization {
+	English
+	Spanish
+	Portuguese
+}
+Preferences *-right- LanguageLocalization : > has 1
+@enduml
