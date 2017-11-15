@@ -7,4 +7,11 @@ class Message{
     +type: MessageType
     +message: string
 }
+
+enum MessageType{
+    Sent
+    Recieved
+}
+
+Message *-right- MessageType : > has 1
 @enduml
