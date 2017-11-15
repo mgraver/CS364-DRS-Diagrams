@@ -2,16 +2,16 @@
 
 skinparam classAttributeIconSize 0
 
-class Message{
+class ChatMessage{
     +isSent: bool
-    +type: MessageType
+    +type: ChatMessageType
     +message: string
 }
 
-enum MessageType{
+enum ChatMessageType{
     Sent
     Recieved
 }
 
-Message *-right- MessageType : > has 1
+ChatMessage *-right- ChatMessageType : > has 1
 @enduml
