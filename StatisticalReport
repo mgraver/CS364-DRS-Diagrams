@@ -1,0 +1,45 @@
+@startuml
+
+class StatisticalReport {
+  +Int familiesTaught
+  +Int totalFamilies
+  +Float percenFamiliesTaught
+  +Int menContacted
+  +Int womenContacted
+  +Int avrHTWorkload
+  +Int avrVTWorkload
+  +Int HTVisits
+  +Int VTVisits
+  +Deadline deadline
+  +getFamiliesTaught(): Int
+  +setFamiliesTaught(Int taught): void
+  +getTotalFamilies(): Int
+  +setTotalFamilies(Int total): void
+  +calcPercentTaught(Int total, Int taught): Float
+  +getMenContacted(): Int
+  +setMenContacted(Int men): void
+  +getWomenContacted(): Int
+  +setWomenContacted(): void
+  +getAvrHTWorkload(): Float
+  +calcAvrHTWorkload(Int numHT, Int totalFamilies): Float
+  +getAvrVTWorkload(): Float
+  +calcAvrVTWorkload(Int numVt, Int totalFamilies): Float
+  +getHTVisits(): Int
+  +setHTVisits(Int numVisits): Void
+  +getVTVisits(): Int
+  +setVTVisits)Int numVisits):Void
+  +getDeadline(): Deadline
+  +setDeadline(Deadline)
+}
+
+class Deadline{
+    +Day day
+    +Month month
+    +Year year
+}
+
+
+StatisticalReport *-right- Deadline : > has 1
+
+
+@enduml
