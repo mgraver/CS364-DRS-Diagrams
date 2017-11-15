@@ -1,0 +1,15 @@
+@startuml
+
+
+class Review{
+   +Char username
+   +Int rating
+   +Char text
+   +enterUserName(): Void
+   +enterText(): Void
+   +enterRating(): Void
+   +readReview(): Char
+}
+
+
+@enduml
