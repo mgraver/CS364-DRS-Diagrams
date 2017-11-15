@@ -6,6 +6,9 @@ class ChatArea{
     +recipients: List<User>
     +currentMessage: chatMessage
     +isSent: bool
+    +deleteMessages(): void
+    +clearHistory(): void
+    +archiveMessages(): void
     +sendMessage(): bool
     +retrieveMessage(): string
     +notifyUser(): Notification
