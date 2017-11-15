@@ -6,7 +6,6 @@ class ChatMessage{
     +isNullOrEmpty: bool
     +type: ChatMessageType
     +message: string
-    +notification: Reminder
 }
 
 enum ChatMessageType{
