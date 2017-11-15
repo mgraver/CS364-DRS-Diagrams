@@ -1,0 +1,14 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class ChatArea{
+    +recipients: List<User>
+    +currentMessage: chatMessage
+    +isSent: bool
+    +sendMessage(): bool
+    +retrieveMessage(): string
+    +notifyUser(): Notification
+}
+
+@enduml
