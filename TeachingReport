@@ -1,0 +1,14 @@
+@startuml
+
+class TeachingReport {
+  +User * teachee
+  +Bool taught
+  +Char notes
+  +getTeahcee(): User
+  +wasTaught(): Bool
+  +setTaught(): void
+  +writeNotes(Char text): void
+  +readNotes(): Char
+}
+
+@enduml
