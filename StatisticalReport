@@ -20,9 +20,7 @@ class StatisticalReport {
 }
 
 class Deadline{
-    +Day day
-    +Month month
-    +Year year
+
 }
 
 
