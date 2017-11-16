@@ -1,11 +1,10 @@
 @startuml
-
+skinparam classAttributeIconSize 0
 
 class Deadline{
     +Day day
     +Month month
     +Year year
 }
-
 
 @enduml
