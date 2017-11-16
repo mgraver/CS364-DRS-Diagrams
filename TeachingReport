@@ -1,14 +1,10 @@
 @startuml
+skinparam classAttributeIconSize 0
 
 class TeachingReport {
-  +User * teachee
-  +Bool taught
-  +Char notes
-  +getTeahcee(): User
-  +wasTaught(): Bool
-  +setTaught(): void
-  +writeNotes(Char text): void
-  +readNotes(): Char
+  +teachee : User
+  +taught : bool
+  +notes : string
 }
 
 @enduml
