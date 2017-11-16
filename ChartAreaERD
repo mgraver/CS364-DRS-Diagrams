@@ -1,0 +1,42 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Messages{
+    +message: ChatMessage
+}
+
+class ChatArea{
+    +recipients: List<User>
+    +currentMessage: chatMessage
+    +isSent: bool
+    +deleteMessages(): void
+    +clearHistory(): void
+    +archiveMessages(): void
+    +sendMessage(): bool
+    +retrieveMessage(): string
+    +notifyUser(): Notification
+}
+
+class ChatHistory{
+    +chatMessages: List<chatMessage>
+}
+
+class ChatMessage{
+    +isNullOrEmpty: bool
+    +type: ChatMessageType
+    +message: string
+}
+
+enum ChatMessageType{
+    Sent
+    Recieved
+}
+
+ChatMessage *-right- ChatMessageType : > has 1
+ChatArea o-- ChatMessage : > has 1..*
+ChatMessage o-- Messages: > has 1..*
+ChatHistory *-- ChatMessage : > has 1..*
+ChatArea *-- ChatHistory : > has 1..*
+
+@enduml
