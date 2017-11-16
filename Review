@@ -1,15 +1,10 @@
 @startuml
-
+skinparam classAttributeIconSize 0
 
 class Review{
-   +Char username
-   +Int rating
-   +Char text
-   +enterUserName(): Void
-   +enterText(): Void
-   +enterRating(): Void
-   +readReview(): Char
+   +username : string
+   +rating : int
+   +text : string
 }
-
 
 @enduml
