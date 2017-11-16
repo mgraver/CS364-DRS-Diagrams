@@ -4,7 +4,14 @@ skinparam classAttributeIconSize 0
 
 class Visit {
     +assignent : Assignent
-    +date: Date
+    +date : Date
+    +type : VisitType
 }
+
+enum VisitType {
+    HomeTeaching
+    VisitingTeaching
+}
+Visit *-right- VisitType : > has 1
 
 @enduml
