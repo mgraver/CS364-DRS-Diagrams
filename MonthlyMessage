@@ -1,12 +1,12 @@
 @startuml
+skinparam classAttributeIconSize 0
 
 class MonthlyMessage {
-  +Char url
-  +Month month
-  +Year year
-  +MessageType type
-  +GetURL(Year year, Month month, MessageType type): char
-  +LoadMessage(Char url): void
+  +url : string
+  +month : Month
+  +year : Year
+  +type : MessageType
+  +LoadMessage(url): void
 }
 
 enum MessageType {
