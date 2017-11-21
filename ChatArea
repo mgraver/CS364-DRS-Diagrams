@@ -3,9 +3,9 @@
 skinparam classAttributeIconSize 0
 
 class ChatArea{
-    +recipients: List<User>
-    +currentMessage: chatMessage
-    +isSent: bool
+    -recipients: List<User>
+    -currentMessage: chatMessage
+    -isSent: bool
     +deleteMessages(): void
     +clearHistory(): void
     +archiveMessages(): void
