@@ -4,28 +4,29 @@ skinparam classAttributeIconSize 0
 
 class User {
     -isAuthenticated : bool
-    +username : string
-    +password : string
-    +hasTwoFactorAuthenticaton : bool
+    -username : string
+    -password : string
+    -hasTwoFactorAuthenticaton : bool
     +isAuthenticated() : bool
-    +roles : List<Role>
+    -roles : List<Role>
     +hasPermission(Permission) : bool
-    +contactInformation : ContactInformation
-    +birthday : Date
-    +doNotVisit : bool
-    +personalCalendar : PersonalCalendar
+    -contactInformation : ContactInformation
+    -birthday : Date
+    -doNotVisit : bool
+    -personalCalendar : PersonalCalendar
+    -ward : Ward
 }
 
 class ContactInformation {
-  +name : string
-  +phoneNumbers : List<PhoneNumber>
-  +addresses : List<Address>
-  +emailAddress : string
+  -name : string
+  -phoneNumbers : List<PhoneNumber>
+  -addresses : List<Address>
+  -emailAddress : string
 }
 
 class PhoneNumber {
-  +number : string
-  +type : PhoneType
+  -number : string
+  -type : PhoneType
 }
 
 enum PhoneType {
@@ -36,17 +37,17 @@ enum PhoneType {
 }
 
 class Address {
-  +addressLine1 : string
-  +addressLine2 : string
-  +addressLine3 : string
-  +addressLine4 : string
-  +addressLine5 : string
-  +city : string
-  +stateOrProvince : string
-  +postalCode : string
-  +county : string
-  +country : string
-  +addressType : AddressType
+  -addressLine1 : string
+  -addressLine2 : string
+  -addressLine3 : string
+  -addressLine4 : string
+  -addressLine5 : string
+  -city : string
+  -stateOrProvince : string
+  -postalCode : string
+  -county : string
+  -country : string
+  -addressType : AddressType
 }
 
 enum AddressType {
@@ -55,8 +56,8 @@ enum AddressType {
 }
 
 class Role {
-    +name : string
-    +permissions : Set<Permission>
+    -name : string
+    -permissions : Set<Permission>
 }
 
 enum Permission {
