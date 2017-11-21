@@ -5,6 +5,8 @@ skinparam classAttributeIconSize 0
 class Stake {
     -wards : List<Ward>
     -name : string
+    -stakePresident : User
+    -stakeReliefSocietyPresident : User
 }
 
 @enduml
