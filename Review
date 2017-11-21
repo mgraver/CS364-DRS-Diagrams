@@ -2,9 +2,9 @@
 skinparam classAttributeIconSize 0
 
 class Review{
-   +username : string
-   +rating : int
-   +text : string
+   -username : string
+   -rating : int
+   -text : string
 }
 
 @enduml
