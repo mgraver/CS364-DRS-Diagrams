@@ -3,13 +3,13 @@
 skinparam classAttributeIconSize 0
 
 class Messages{
-    +message: ChatMessage
+    -message: ChatMessage
 }
 
 class ChatArea{
-    +recipients: List<User>
-    +currentMessage: chatMessage
-    +isSent: bool
+    -recipients: List<User>
+    -currentMessage: chatMessage
+    -isSent: bool
     +deleteMessages(): void
     +clearHistory(): void
     +archiveMessages(): void
@@ -19,13 +19,13 @@ class ChatArea{
 }
 
 class ChatHistory{
-    +chatMessages: List<chatMessage>
+    -chatMessages: List<chatMessage>
 }
 
 class ChatMessage{
-    +isNullOrEmpty: bool
-    +type: ChatMessageType
-    +message: string
+    -isNullOrEmpty: bool
+    -type: ChatMessageType
+    -message: string
 }
 
 enum ChatMessageType{
