@@ -1,11 +1,9 @@
-@startuml
-
-skinparam classAttributeIconSize 0
-
 class Ward {
     -members : List<Users>
     -stake : Stake
     -name : string
+    -bishop : User
+    -eldersQuorumPresident : User
+    -reliefSocietyPresident : User
+    -highPriestGroupLeader : User
 }
-
-@enduml
