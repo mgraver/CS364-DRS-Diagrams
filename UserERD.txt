@@ -72,6 +72,19 @@ enum Permission {
     ...TBD
 }
 
+class Stake {
+    -wards : List<Ward>
+    -name : string
+}
+
+class Ward {
+    -members : List<Users>
+    -stake : Stake
+    -name : string
+}
+
+Ward o-right- User : > has 0..*
+Stake o-up- Ward : > has 1..*
 User o-- Role : > has 1..*
 Role *-- Permission : > has 1..*
 User *-- ContactInformation : > has 1..*
@@ -81,3 +94,4 @@ ContactInformation *-- Address : > has 1..*
 Address *-- AddressType  : > has 1
 
 @enduml
+
