@@ -2,18 +2,13 @@
 
 skinparam classAttributeIconSize 0
 
-abstract class Calendar {
-}
-
 class Year {
-  +months : KeyValue<MonthNames, Month>
-  +name : int
+  -months : KeyValue<MonthNames, Month>
+  -name : int
   +getMonth(MonthNames) : Month
   +addMonth(Month) : void
   +updateMonth(Month) : void
   +deleteMonth(Month) : void
 }
 
-Calendar *-- Year
-Year *-- Month
 @enduml
