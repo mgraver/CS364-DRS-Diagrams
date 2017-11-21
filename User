@@ -4,15 +4,16 @@ skinparam classAttributeIconSize 0
 
 class User {
     -isAuthenticated : bool
-    +username : string
-    +password : string
-    +hasTwoFactorAuthenticaton : bool
+    -username : string
+    -password : string
+    -hasTwoFactorAuthenticaton : bool
     +isAuthenticated() : bool
-    +roles : List<Role>
+    -roles : List<Role>
     +hasPermission(Permission) : bool
-    +contactInformation : ContactInformation
-    +birthday : Date
-    +doNotVisit : bool
-    +personalCalendar : PersonalCalendar
+    -contactInformation : ContactInformation
+    -birthday : Date
+    -doNotVisit : bool
+    -personalCalendar : PersonalCalendar
+    -ward : Ward
 }
 @enduml
