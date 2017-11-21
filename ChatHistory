@@ -3,7 +3,7 @@
 skinparam classAttributeIconSize 0
 
 class ChatHistory{
-    +chatMessages: List<chatMessage>
+    -chatMessages: List<chatMessage>
 }
 
 @enduml
