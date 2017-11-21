@@ -1,0 +1,10 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Stake {
+    -wards : List<Ward>
+    -name : string
+}
+
+@enduml
