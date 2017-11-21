@@ -2,9 +2,9 @@
 skinparam classAttributeIconSize 0
 
 class TeachingReport {
-  +teachee : User
-  +taught : bool
-  +notes : string
+  -teachee : User
+  -taught : bool
+  -notes : string
 }
 
 @enduml
