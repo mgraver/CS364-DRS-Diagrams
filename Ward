@@ -1,3 +1,7 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
 class Ward {
     -members : List<Users>
     -stake : Stake
@@ -7,3 +11,5 @@ class Ward {
     -reliefSocietyPresident : User
     -highPriestGroupLeader : User
 }
+
+@enduml
