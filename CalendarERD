@@ -3,7 +3,7 @@
 skinparam classAttributeIconSize 0
 
 abstract class Calendar {
-  +years : KeyValue<int, Year>
+  -years : KeyValue<int, Year>
   +getYear(int) : Year
   +addYear(Year) : void
   +updateYear(Year) : void
@@ -11,8 +11,8 @@ abstract class Calendar {
 }
 
 class Year {
-  +months : KeyValue<MonthNames, Month>
-  +name : int
+  -months : KeyValue<MonthNames, Month>
+  -name : int
   +getMonth(MonthNames) : Month
   +addMonth(Month) : void
   +updateMonth(Month) : void
@@ -20,8 +20,8 @@ class Year {
 }
 
 class Month {
-  +days : KeyValue<int, Day>
-  +name : MonthNames
+  -days : KeyValue<int, Day>
+  -name : MonthNames
   +getDay(int) : Day
   +addDay(Day) : void
   +updateDay(Day) : void
@@ -29,8 +29,8 @@ class Month {
 }
 
 class Day {
-  +hours : KeyValue<int, Hour>
-  +name : int
+  -hours : KeyValue<int, Hour>
+  -name : int
   +getHour(int) : Hour
   +addHour(Hour) : void
   +updateHour(Hour) : void
@@ -38,8 +38,8 @@ class Day {
 }
 
 class Hour {
-  +events : List<Event>
-  +name : int
+  -events : List<Event>
+  -name : int
   +addEvent(Event) : void
   +updateEvent(Event) : void
   +deleteEvent(Event) : void
@@ -63,11 +63,11 @@ enum MonthNames {
 }
 
 class PersonalCalendar {
-    +user : User
+    -user : User
 }
 
 class WardCalendar {
-    +ward : Ward
+    -ward : Ward
 }
 
 abstract class Event {
