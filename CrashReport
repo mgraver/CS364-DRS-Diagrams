@@ -1,8 +1,8 @@
 @startuml
 skinparam classAttributeIconSize 0
 class CrashReport {
-	+errorMessage : string
-	+stacktrace : string
-	+userID : User
+	-errorMessage : string
+	-stacktrace : string
+	-userID : User
 }
 @enduml
