@@ -6,7 +6,6 @@ class User {
     -isAuthenticated : bool
     -username : string
     -password : string
-    -hasTwoFactorAuthenticaton : bool
     +isAuthenticated() : bool
     -roles : List<Role>
     +hasPermission(Permission) : bool
@@ -15,6 +14,8 @@ class User {
     -doNotVisit : bool
     -personalCalendar : PersonalCalendar
     -ward : Ward
+    -preferences : Preferences 
+    +hasTwoFactorAuthenticaton() : bool
 }
 
 class ContactInformation {
@@ -91,6 +92,7 @@ class Ward {
 
 Ward o-right- User : > has 0..*
 Stake o-up- Ward : > has 1..*
+User *-right- Preferences : > has 1
 User o-- Role : > has 1..*
 Role *-- Permission : > has 1..*
 User *-- ContactInformation : > has 1..*
