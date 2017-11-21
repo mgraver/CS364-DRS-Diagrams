@@ -3,8 +3,8 @@
 skinparam classAttributeIconSize 0
 
 class Assignent {
-    +assignedCompanionship : Companionship
-    +teachees : List<Teachee>
+    -assignedCompanionship : Companionship
+    -teachees : List<Teachee>
 }
 
 @enduml
