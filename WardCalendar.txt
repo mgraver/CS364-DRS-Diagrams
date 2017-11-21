@@ -3,7 +3,7 @@
 skinparam classAttributeIconSize 0
 
 class WardCalendar {
-    +ward : Ward
+    -ward : Ward
 }
 
 @enduml
