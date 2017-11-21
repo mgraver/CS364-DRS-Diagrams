@@ -1,8 +1,8 @@
 @startuml
 skinparam classAttributeIconSize 0
 class Month {
-  +days : KeyValue<int, Day>
-  +name : MonthNames
+  -days : KeyValue<int, Day>
+  -name : MonthNames
   +getDay(int) : Day
   +addDay(Day) : void
   +updateDay(Day) : void
