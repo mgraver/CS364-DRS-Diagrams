@@ -6,26 +6,27 @@ class User {
 }
 
 class Companionship {
-    +teachers : List<User>
-    +assignents : List<Assignent>
-    +isDraft() : bool
-    +effectiveDate : Date
-    +expireDate : Date
-    +teacherContactRecord : TeacherContactRecord
+    -teachers : List<User>
+    -assignents : List<Assignent>
+    -isDraft : bool
+    -effectiveDate : Date
+    -expireDate : Date
+    -teacherContactRecord : TeacherContactRecord
 }
 
 class Assignent {
-    +assignedCompanionship : Companionship
-    +teachees : List<User>
+    -assignedCompanionship : Companionship
+    -teachees : List<Teachee>
 }
 
 class TeacherContactRecord {
-    +visits : List<Visit>
+    -visits : Set<Visit>
 }
 
 class Visit {
-    +assignent : Assignent
-    +date: Date
+    -assignent : Assignent
+    -date : Date
+    -type : VisitType
 }
 
 Assignent o-- User : > has 1..*
