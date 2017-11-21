@@ -3,9 +3,9 @@
 skinparam classAttributeIconSize 0
 
 class ChatMessage{
-    +isNullOrEmpty: bool
-    +type: ChatMessageType
-    +message: string
+    -isNullOrEmpty: bool
+    -type: ChatMessageType
+    -message: string
 }
 
 enum ChatMessageType{
