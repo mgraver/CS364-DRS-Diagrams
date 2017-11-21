@@ -6,7 +6,6 @@ class User {
     -isAuthenticated : bool
     -username : string
     -password : string
-    -hasTwoFactorAuthenticaton : bool
     +isAuthenticated() : bool
     -roles : List<Role>
     +hasPermission(Permission) : bool
@@ -15,5 +14,6 @@ class User {
     -doNotVisit : bool
     -personalCalendar : PersonalCalendar
     -ward : Ward
+    -preferences : Preferences 
 }
 @enduml
