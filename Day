@@ -3,8 +3,8 @@
 skinparam classAttributeIconSize 0
 
 class Day {
-  +hours : KeyValue<int, Hour>
-  +name : int
+  -hours : KeyValue<int, Hour>
+  -name : int
   +getHour(int) : Hour
   +addHour(Hour) : void
   +updateHour(Hour) : void
