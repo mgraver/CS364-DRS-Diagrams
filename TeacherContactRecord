@@ -3,7 +3,7 @@
 skinparam classAttributeIconSize 0
 
 class TeacherContactRecord {
-    +visits : Set<Visit>
+    -visits : Set<Visit>
 }
 
 @enduml
