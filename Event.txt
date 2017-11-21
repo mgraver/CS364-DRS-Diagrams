@@ -4,10 +4,11 @@ skinparam classAttributeIconSize 0
 
 abstract class Event {
   -sendNotification : bool
-  +date : Date
-  +start : Time
-  +title : string
-  +description : string
+  -date : Date
+  -start : Time
+  -end : Time
+  -title : string
+  -description : string
   +enableSendNotification() : void
   +disableSendNotification() : void
   +toggleSendNotification() : void
