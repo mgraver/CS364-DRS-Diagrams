@@ -1,8 +1,9 @@
 @startuml
 skinparam classAttributeIconSize 0
 class Preferences {
-	+user : User
-	+language : LanguageLocalization
+	-user : User
+	-language : LanguageLocalization
+	-hasTwoFactorAuthenticaton : bool
 }
 enum LanguageLocalization {
 	English
