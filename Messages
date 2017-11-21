@@ -1,0 +1,8 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Messages {
+    -message: ChatMessage
+}
+@enduml
