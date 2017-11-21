@@ -15,5 +15,6 @@ class User {
     -personalCalendar : PersonalCalendar
     -ward : Ward
     -preferences : Preferences 
+    +hasTwoFactorAuthenticaton() : bool
 }
 @enduml
