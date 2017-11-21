@@ -75,12 +75,18 @@ enum Permission {
 class Stake {
     -wards : List<Ward>
     -name : string
+    -stakePresident : User
+    -stakeReliefSocietyPresident : User
 }
 
 class Ward {
     -members : List<Users>
     -stake : Stake
     -name : string
+    -bishop : User
+    -eldersQuorumPresident : User
+    -reliefSocietyPresident : User
+    -highPriestGroupLeader : User
 }
 
 Ward o-right- User : > has 0..*
