@@ -1,0 +1,19 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class PhoneNumber {
+  -number : string
+  -type : PhoneType
+}
+
+enum PhoneType {
+    Home
+    Cell
+    Fax
+    Work
+}
+
+PhoneNumber *-right- PhoneType : > has 1
+
+@enduml
