@@ -2,10 +2,10 @@
 skinparam classAttributeIconSize 0
 
 class MonthlyMessage {
-  +url : string
-  +month : Month
-  +year : Year
-  +type : MessageType
+  -url : string
+  -month : Month
+  -year : Year
+  -type : MessageType
   +LoadMessage(url): void
 }
 
