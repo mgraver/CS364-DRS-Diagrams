@@ -13,6 +13,7 @@ abstract class Event {
   +disableSendNotification() : void
   +toggleSendNotification() : void
   +delete() : void
+  +duration() : TimeSpan
 }
 
 class ScheduledEvent {
