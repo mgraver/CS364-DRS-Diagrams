@@ -3,8 +3,8 @@
 skinparam classAttributeIconSize 0
 
 class Role {
-    +name : string
-    +permissions : Set<Permission>
+    -name : string
+    -permissions : Set<Permission>
 }
 
 enum Permission {
