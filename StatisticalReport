@@ -5,13 +5,13 @@ class StatisticalReport {
   -percenFamiliesTaught : float
   -avrHTWorkload : float
   -avrVTWorkload : float
-  +familiesTaught : int
-  +totalFamilies : int
-  +menContacted : int
-  +womenContacted : int
-  +HTVisits : int
-  +VTVisits : int
-  +deadline : Deadline
+  -familiesTaught : int
+  -totalFamilies : int
+  -menContacted : int
+  -womenContacted : int
+  -HTVisits : int
+  -VTVisits : int
+  -deadline : Deadline
   +calcPercentTaught(int total, int taught) : float
   +getAvrHTWorkload() : float
   +calcAvrHTWorkload(int numHT, int totalFamilies) : float
