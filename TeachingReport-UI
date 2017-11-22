@@ -1,0 +1,9 @@
+@startsalt
+
+{#
+  Teachers | Teachee | Visited Month | Visited Year | Visit Type | Notes 
+  Jim Clark | Sandy Smith | Jan | 2015 | Home Teaching | New Job 
+  Cindy Tealpeck | Susan Hill | Jan | 2015 | Visiting Teaching | n/a
+}
+
+@endsalt
