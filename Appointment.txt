@@ -3,7 +3,7 @@
 skinparam classAttributeIconSize 0
 
 class Appointment {
-  -assignent  : Assignent
+  -assignment  : Assignment
 }
 
 @enduml
