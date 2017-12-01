@@ -2,7 +2,7 @@
 skinparam classAttributeIconSize 0
 
 class StatisticalReport {
-  -percenFamiliesTaught : float
+  -percentFamiliesTaught : float
   -avrHTWorkload : float
   -avrVTWorkload : float
   -familiesTaught : int
