@@ -4,7 +4,7 @@ skinparam classAttributeIconSize 0
 
 class Companionship {
     -teachers : List<User>
-    -assignents : List<Assignent>
+    -assignments : List<Assignment>
     -isDraft : bool
     -effectiveDate : Date
     -expireDate : Date
