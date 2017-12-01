@@ -7,7 +7,7 @@ class User {
 
 class Companionship {
     -teachers : List<User>
-    -assignents : List<Assignent>
+    -assignments : List<Assignment>
     -isDraft : bool
     -effectiveDate : Date
     -expireDate : Date
@@ -24,15 +24,15 @@ class TeacherContactRecord {
 }
 
 class Visit {
-    -assignent : Assignent
+    -assignment : Assignment
     -date : Date
     -type : VisitType
 }
 
-Assignent o-- User : > has 1..*
-Companionship o-- Assignent : > has 1..*
+Assignment o-- User : > has 1..*
+Companionship o-- Assignment : > has 1..*
 Companionship o-- User : > has 1..*
 Companionship *-- TeacherContactRecord : > has 1
 TeacherContactRecord *-- Visit : > has 0..*
-Visit *-- Assignent : > has 1
+Visit *-- Assignment : > has 1
 @enduml
