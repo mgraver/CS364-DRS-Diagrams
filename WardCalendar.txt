@@ -4,6 +4,11 @@ skinparam classAttributeIconSize 0
 
 class WardCalendar {
     -ward : Ward
+    -daysOfMonth:Day[]
+    -month:String
+    -days: int
+    -year: int
+    -notification:Bool
 }
 
 @enduml
